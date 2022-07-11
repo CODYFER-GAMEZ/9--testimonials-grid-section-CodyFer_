@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&family=Kumbh+Sans:wght@400;500;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+body {
+    width: 1440px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: auto;
+    /*outline: 2px solid red;*/
+    width: 1110px;
+    height: 580px;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: repeat(2, 50%);
+    gap: 20px;
+}
+
+:root {
+    --color-rosa: hsl(263, 55%, 52%);
+    --color-gray: hsl(217, 19%, 35%);
+    --color-whitee: hsl(0, 0%, 81%);
+    --color-oscuro: hsl(219, 29%, 14%);
+    --color-whiteocuro: hsl(210, 46%, 95%);
+    /* colores secundarios*/
+    --color-blanco: hsl(0, 0, 100%);
+}
+
+h2 {
+    color: var(--color-whiteocuro);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.blac h2 {
+    color: var(--color-gray);
+}
+
+h3 {
+    color: var(--color-whiteocuro);
+    font-size: 13px;
+    font-weight: 300;
+    opacity: .5;
+}
+
+.blac h3 {
+    color: var(--color-gray);
+    opacity: .5;
+}
+
+span {
+    width: 100%;
+    height: auto;
+}
+
+.img_person {
+    display: flex;
+    align-items: center;
+}
+
+.img_person img {
+    width: 32px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.borde_im {
+    border: 2px solid hsl(268, 88%, 74%);
+}
+
+.borde_img {
+    border: 2px solid var(--color-rosa)
+}
+
+p {
+    color: var(--color-whiteocuro);
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.para {
+    color: var(--color-gray);
+}
+
+.p_dos {
+    color: var(--color-whiteocuro);
+    opacity: .5;
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.paraa {
+    color: var(--color-gray);
+    opacity: 90%;
+    font-weight: 600;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 25px;
+    padding-bottom: 0;
+    display: grid;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.card_daniel {
+    background: var(--color-rosa);
+    grid-column: span 2;
+    position: relative;
+}
+
+.comillas {
+    width: 113px;
+    position: absolute;
+    top: 0;
+    right: 76px;
+    z-index: -1;
+}
+
+.card_jonathan {
+    background: var(--color-gray);
+}
+
+.card_jonathan .p_dos {
+    opacity: .8;
+}
+
+.card_jeanette {
+    background: var(--color-whiteocuro);
+    grid-column: 1 /2;
+    /*outline: 2px solid rgb(3, 3, 3);*/
+}
+
+.card_jeanette p {
+    font-size: 23px;
+}
+
+.card_jeanette .p_dos {
+    font-size: 13px;
+}
+
+.card_patrick {
+    background: var(--color-oscuro);
+    grid-column: span 2;
+}
+
+.card_patrick .p_dos {
+    opacity: .8;
+}
+
+.card_kira {
+    /* outline: 2px solid red;*/
+    background: var(--color-whiteocuro);
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+
+.Creditos {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.Creditos a {
+    font-size: 12px;
+    color: hsl(228, 80%, 37%);
+    text-decoration: none;
+    border-bottom: 2.5px solid transparent;
+    transition: border 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+.Creditos a:hover {
+    border-bottom: 2.5px solid hsl(228, 80%, 37%);
+}
+
+@media (max-width:700px) {
+    body {
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        width: 360px;
+        padding: 30px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card {
+        height: auto;
+        padding: 25px;
+        justify-content: space-evenly;
+    }
+    .comillas {
+        width: 90px;
+        position: absolute;
+        top: 0;
+        right: 10%;
+        z-index: -1;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 17px;
+    }
+    .p_dos {
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-size: 12px;
+    }
+    .card_jeanette .p_dos {
+        color: var(--color-oscuro);
+        opacity: .65;
+    }
+    .card_kira .p_dos {
+        color: var(--color-oscuro);
+        opacity: .65;
+    }
+    .Creditos {
+        font-size: 11px;
+        font-weight: normal;
+    }
+    .Creditos a {
+        font-size: 10px;
+    }
+}
